@@ -6,11 +6,6 @@ public class Contacto implements Comparable<Contacto>{
 	private int prefix;
 	private int number;
 	
-	public Contacto() {
-		this.nombre = "";
-		this.prefix = 00;
-		this.number = 000000000;
-	}
 	public Contacto(String nombre, int prefix, int number) {
 		this.nombre = nombre;
 		this.prefix = prefix;
