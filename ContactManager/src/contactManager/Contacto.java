@@ -4,9 +4,9 @@ public class Contacto implements Comparable<Contacto>{
 	
 	private String nombre;
 	private int prefix;
-	private int number;
+	private String number;
 	
-	public Contacto(String nombre, int prefix, int number) {
+	public Contacto(String nombre, int prefix, String number) {
 		this.nombre = nombre;
 		this.prefix = prefix;
 		this.number = number;
@@ -16,7 +16,7 @@ public class Contacto implements Comparable<Contacto>{
 		return nombre;
 	}
 	
-	public int getNumber() {
+	public String getNumber() {
 		return number;
 	}
 	
@@ -28,7 +28,7 @@ public class Contacto implements Comparable<Contacto>{
 		this.nombre = nombre;
 	}
 	
-	public void setNumber(int number) {
+	public void setNumber(String number) {
 		this.number = number;
 	}
 	
@@ -41,20 +41,12 @@ public class Contacto implements Comparable<Contacto>{
 	}
 	
 	@Override
-	public int compareTo(Contacto o) {
-	    int cmp = this.nombre.compareTo(o.nombre);
-	    
-	    if (cmp == 0) {
-	        if (this.number == o.number) {
-	            return 0;
-	        } else if (this.number < o.number) {
-	            return -1;
-	        } else {
-	            return 1;
-	        }
-	    }
-	    return cmp;
-	}
-
-	
+    public int compareTo(Contacto o) {
+        int cmp = this.nombre.compareTo(o.nombre);
+        
+        if (cmp == 0) {
+            return this.number.compareTo(o.number); // Comparar también por número
+        }
+        return cmp;
+    }
 }
