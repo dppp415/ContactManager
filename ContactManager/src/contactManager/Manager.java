@@ -23,6 +23,14 @@ public class Manager {
 		this.contactos.clear();
 	}
 	
+	public ArrayList<Contacto> getContactos() {
+        return contactos;
+    }
+	
+	public void setContactos(ArrayList<Contacto> contactos) {
+        this.contactos = contactos;
+    }
+	
 	public void sort() {
 		Collections.sort(this.contactos);
 	}
