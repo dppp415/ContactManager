@@ -1,2 +1,2 @@
 # ContactManager
-Java project of a contact manager. No graphic illustrations.
+Basic Java project of a contact manager.
